@@ -1,4 +1,10 @@
 S3certified::Application.routes.draw do
+ match 'seller'  => 'pages#seller',  :as => :seller
+ match 'buyer'   => 'pages#buyer',   :as => :buyer
+ match 'about'   => 'pages#about',   :as => :about
+ match 'contact' => 'pages#contact', :as => :contact
+ root :to => "pages#home" 
+ 
   get "pages/home"
 
   get "pages/seller"
