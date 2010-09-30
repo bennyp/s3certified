@@ -1,12 +1,12 @@
 S3certified::Application.routes.draw do
-  
-  get "carids/new"
-
+ # Need to figure out to how to make it conditional on X being a number ... 
+ # match "/:id" => 'carids#show'
  match 'seller'  => 'pages#seller',  :as => :seller
  match 'buyer'   => 'pages#buyer',   :as => :buyer
  match 'about'   => 'pages#about',   :as => :about
  match 'contact' => 'pages#contact', :as => :contact
- match 'new'     => 'carids#new',    :as => :new
+ match 'enter'     => 'carids#new',    :as => :new
+
  root :to => "pages#home" 
  
   get "pages/home"
@@ -18,6 +18,10 @@ S3certified::Application.routes.draw do
   get "pages/contact"
 
   get "pages/about"
+
+  get "carids/new"
+
+  resources :carids
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

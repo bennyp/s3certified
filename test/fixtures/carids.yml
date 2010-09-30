@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  caridnum: MyString
+  carvin: MyString
+
+two:
+  caridnum: MyString
+  carvin: MyString
