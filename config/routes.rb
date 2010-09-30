@@ -1,8 +1,12 @@
 S3certified::Application.routes.draw do
+  
+  get "carids/new"
+
  match 'seller'  => 'pages#seller',  :as => :seller
  match 'buyer'   => 'pages#buyer',   :as => :buyer
  match 'about'   => 'pages#about',   :as => :about
  match 'contact' => 'pages#contact', :as => :contact
+ match 'new'     => 'carids#new',    :as => :new
  root :to => "pages#home" 
  
   get "pages/home"
