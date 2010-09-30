@@ -1,0 +1,2 @@
+module CaridsHelper
+end
